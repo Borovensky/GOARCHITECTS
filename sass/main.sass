@@ -1,0 +1,341 @@
+@import url(https://fonts.googleapis.com/css?family=Century%20Gothic)
+@import "bourbon/bourbon"
++font-face("Century Gothic", "../fonts/Century_Gothic", normal, $file-formats: ttf)
++font-face("Century Gothic", "../fonts/GOTIHIC", 400, $file-formats: TTF)
++font-face("Century Gothic", "../fonts/GOTIHICB", bold, $file-formats: TTF)
+
+$main_background: rgb(26,31,35)
+$conteiner_background: rgb(22,26,30)
+
+body
+	line-height: 1 
+	font-family: Century Gothic
+	font-size: 14px
+h1
+	margin: 0 0
+h1,h2,h3,h4,p
+	color: #ffffff
+h4
+	font-size: 25px
+
+.loader 
+	background: none repeat scroll 0 0 $main_background
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	// .loader_inner 
+		// background-image: url(./img/loader.gif)
+		// background-repeat: no-repeat
+		// background-position: center center
+		// background-color: $main_background
+		// height: 60px
+		// width: 60px
+		// margin-top: -60px
+		// margin-left: -60px
+		// left: 50%
+		// top: 50%
+		// position: absolute
+
+header
+	background: $main_background
+	height: 100%
+	background-image: url(./img/main.png)
+	background-position: center center
+	background-repeat: no-repeat
+	background-attachment: fixed
+	-webkit-background-size: cover
+	background-size: cover
+	// box-shadow: inset 0px -120px 60px -50px $main_background
+
+.gradient
+	position: absolute
+	z-index: 0
+	width: 100%
+	background-position: center center
+	background-repeat: no-repeat
+	background-attachment: fixed
+	-webkit-background-size: cover
+	background-size: cover
+	background: linear-gradient(180deg, rgba(244,244,244,0) 80%, rgba(26,31,35, 1) 100%)
+	
+.parent
+	width: 100%
+	height: 100%
+	position: relative
+	top: 0
+	left: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	overflow: auto
+
+.main_page-content
+	overflow: hidden
+	h1
+		font-size: 120px
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: 8px
+		margin: 0 auto
+		text-shadow: 1px 0px 20px rgba(0, 0, 0, 1)
+	p
+		text-align: center
+		font-size: 30px
+		font-weight: 500
+		text-transform: lowercase
+		letter-spacing: 2px
+		text-shadow: 1px 0px 5px rgba(0, 0, 0, 1)
+.language
+	position: absolute
+	top: 20px
+	right: 30px
+	p
+		text-transform: uppercase
+		float: left
+		font-size: 20px
+		line-height: 24px
+		letter-spacing: 1px
+		padding: 8px
+		color: $main_background
+		border-right: 1px solid $main_background
+		cursor: pointer
+		text-shadow: 1px 0px 5px rgba(0, 0, 0, 0)
+		&:last-child
+			border: none
+	.active
+		font-weight: bold
+
+
+
+.social_icon
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-between
+	width: 290px
+	margin: 0 auto
+	margin-top: -130px
+	.button
+		width: 60px
+		height: 60px
+		background: rgba(244, 244, 244, .5)
+		border-radius: 50%
+		transform-style: preserve-3d
+		img
+			position: relative
+			width: 35px
+			height: 35px
+			top: 12px
+			left: 13px
+
+// ===============================================================
+section, footer
+	background: $main_background
+
+// ===============================================================
+hr
+	position: relative
+	margin: 0 auto
+	border: 0
+	border-top: 2px solid #ffffff
+	width: 39%
+	left: 30px
+
+
+.central_block
+	width: 807px //
+	height: 1035px //
+	background: $conteiner_background
+	margin: 0 auto
+	box-shadow: 0 2px 14px 0 rgba(0,0,0,0.5)
+.content_block-info
+
+.content_block-about
+
+
+.section_header
+	text-align: center
+	margin-top: 114px
+	margin-bottom: 114px
+	h2
+		font-size: 60px
+		font-weight: bold
+		letter-spacing: 5px
+.info
+	.inner
+		// height: 500px
+
+.architectural_design
+	.img
+		position: absolute
+		top: -70px
+		left: -100px
+		width: 320px
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5)
+		img
+			width: 100%
+			height: auto
+	.content_right
+		text-align: left
+		h4
+			font-weight: bold
+			font-size: 25px
+			letter-spacing: 1px
+			line-height: 31px
+			margin-top: 55px
+			margin-bottom: 29px
+		p
+			font-size: 16px
+			line-height: 25px
+			font-weight: 400
+			letter-spacing: 1px
+			margin-bottom: 87px
+
+.interior_design
+	.content_left
+		// border-top: 2px solid #ffffff
+		// border-bottom: 2px solid #ffffff
+		text-align: right
+		// padding: 15px 0px 15px 60px
+		h4
+			font-size: 25px
+			font-weight: bold
+			letter-spacing: 1px
+			line-height: 31px
+			margin-top: 55px
+			margin-bottom: 29px
+		p
+			font-size: 16px
+			line-height: 25px
+			font-weight: 400
+			letter-spacing: 1px
+			margin-bottom: 87px
+	.img
+		position: absolute
+		top: -30px
+		right: -155px
+		width: 320px
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5)
+		img
+			width: 100%
+			height: auto
+
+.planning_design
+	.img
+		position: absolute
+		top: -30px
+		left: -100px
+		width: 320px
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5)
+		img
+			width: 100%
+			height: auto	
+	.content_right
+		text-align: left
+		// padding: 15px 60px 15px 0px 
+		h4
+			font-size: 25px
+			font-weight: bold
+			letter-spacing: 1px
+			line-height: 31px
+			margin-top: 55px
+			margin-bottom: 29px
+		p
+			font-size: 16px
+			line-height: 25px
+			font-weight: 400
+			letter-spacing: 1px
+			margin-bottom: 87px
+
+// ===============================================================
+.about_block
+	width: 807px //
+	height: 341px //
+	background: $conteiner_background
+	margin: 0 auto
+	box-shadow: 0 2px 14px 0 rgba(0,0,0,0.5)
+.about_content
+	.content_left
+		text-align: left
+		padding: 15px 35px 0px 44px
+		h4
+			font-size: 25px
+			font-weight: bold
+			letter-spacing: 2px
+			margin-top: 40px
+			margin-bottom: 20px
+		p
+			font-size: 16px
+			font-weight: 400
+			letter-spacing: 1px
+			line-height: 20px
+			margin-bottom: 35px
+		.right_side
+			text-align: right
+			p
+				font-size: 16px
+				font-weight: 400
+				letter-spacing: 1px
+				line-height: 25px
+				margin-bottom: 35px
+	.img
+		position: absolute
+		top: -30px
+		right: -28px
+		width: 230px
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5)
+		img
+			width: 100%
+			height: auto
+
+// ===============================================================
+footer
+	.contact_section
+		text-align: center
+		margin-top: 122px
+		h3
+			font-size: 24px
+			line-height: 29px
+			font-weight: bold
+			letter-spacing: 1px
+			margin-bottom: 33px
+		p
+			font-size: 22px
+			line-height: 27px
+			font-weight: 400
+			letter-spacing: 1px
+			margin-bottom: 13px		
+	.social_icon
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-between
+		width: 290px
+		margin: 60px auto 55px auto
+		.button
+			width: 60px
+			height: 60px
+			background: rgba(244,244,244, 1)
+			border-radius: 50%
+			transform-style: preserve-3d
+			img
+				position: relative
+				width: 35px
+				height: 35px
+				top: 12px
+				left: 13px
+	.footer
+		text-align: center
+		p
+			font-size: 14px
+			line-height: 17px
+			text-align: center
+			margin-top: 0px
+			margin-bottom: 20px
+		a 
+			color: #ffffff

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+html(lang="en" ng-app="goarchitects")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		//- SEO description
+		meta(name="description" content="")
+		//- Icon
+		link(rel="icon" href="")
+		//- Link
+		title GOARCHITECTS
+		link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+		link(rel="stylesheet" href="./css/main.css")
+		link(rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css")
+		//- Script
+		script(type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js")
+		script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js")
+		script(type="text/javascript" src="./js/jquery.mCustomScrollbar.concat.min.js")
+		script(type="text/javascript" src="./js/scrollbars.min.js")
+		script(type="text/javascript" src="./js/app.js")
+		
+		//- if lt IE 9
+			script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+		//- ng-scrollbars ng-scrollbars-config="scrollbarConfig"
+	body(ng-controller='mainCtrl')
+		div(ng-scrollbars ng-scrollbars-config="scrollbarConfig")
+			div.loader
+				div.loader_inner
+			
+			div.gradient
+
+			header
+				div.parent
+					div.main_page-content
+						h1 goarchitects
+						div(ng-if="en()")
+							p architectural bureau
+						div(ng-if="ua()")
+							p архітектурне бюро
+						div.language
+							p.en(ng-click="swith_en()") EN
+							p.ua(ng-click="swith_ua()") UA
+				div.social_icon
+					a(href="https://www.facebook.com/thegoarchitects" target="black")
+						div.button
+							img(src="./css/img/facebook-logo-b.svg" alt="")
+					a(href="https://www.behance.net/thegoarchitects" target="black")
+						div.button
+							img(src="./css/img/behance-logo-b.svg" alt="")
+					a(href="https://www.instagram.com/thegoarchitects/" target="black")
+						div.button
+							img(src="./css/img/instagram-logo-b.svg" alt="")
+					a(href="mailto:na.bulatov@gmail.com&Body=%0D%0A%0D%0AHello%20Nikita" target="black")
+						div.button
+							img(src="./css/img/envelope-b.svg" alt="")
+
+			section.info(name="section")
+				div.container
+					div.section_header
+						div(ng-if="en()")
+							h2 Services
+						div(ng-if="ua()")
+							h2 Послуги
+					div.central_block
+						div.row
+							div.col-lg-11.col-lg-offset-0.inner.content_block-info
+								div.row
+									div.architectural_design
+										div.col-sm-4
+											div.img
+												img(src="./css/img/1.png")
+										div.col-sm-8
+											div.content_right
+												div(ng-if="en()")
+													h4 Architectural design
+													p For our team, design - is, first of all, functional organization of space according to the needs of our customers. We develop projects of residential and public buildings.
+												div(ng-if="ua()")
+													h4 Архітектурне проектування
+													p Для нашої команди, проектування - це, в першу чергу, функціональна організація простору відповідно до потреб наших клієнтів. Ми займаємося розробкою проектів житлових та громадських будівель і споруд.
+								hr		
+								div.row
+									div.interior_design
+										div.col-sm-9
+											div.content_left
+												div(ng-if="en()")
+													h4 Interior design
+													p 
+														| We design individual interior project both residential and public space, such as:
+														br
+														| - planning solution and visualization;
+														br
+														| - developing a set of working documents;
+														br
+														| - selection of finish materials, equipment and furniture;
+														br
+														| - author's support of the project implementation;
+												div(ng-if="ua()")
+													h4 Дизайн інтер’єру
+													p 
+														| Ми розробляємо індивідульний дизайн інтер’єру житлового та громадського простору, а саме:
+														br
+														| - планувальне рішення і візуалізацію приміщень;
+														br
+														| - комплект робочої документації;
+														br
+														| - підбір оздоблювальних матеріалів, меблів та обладнення;
+														br
+														| - авторський супровід реалізації проекту;
+										div.col-sm-3
+											div.img
+												img(src="./css/img/2.png")
+								hr
+								div.row
+									div.planning_design
+										div.col-sm-4
+											div.img
+												img(src="./css/img/3.png")
+										div.col-sm-8
+											div.content_right
+												div(ng-if="en()")
+													h4 Planning design
+													p Planning design as one of the stages of project development and independent process in the design needed to determine effective planning scheme of the space. The stage is based on a composite together with the customer technical task.
+												div(ng-if="ua()")
+													h4 Функціонально-
+														br 
+														| планувальна організація простору
+													p ФПОП, як один з етапів розробки проекту, так і самостійний процес в проектуванні, необхідний для визначення ефективної планувальної схеми приміщення. Етап виконується на основі складеного разом з замовником технічного завдання на проектування.
+			section.about
+				div.container
+					div.section_header
+						div(ng-if="en()")
+							h2 About
+						div(ng-if="ua()")
+							h2 Про бюро
+					div.about_block
+						div.row
+							div.col-md-11.col-md-offset-0.inner.content_block-about
+								div.row
+									div.about_content
+										div.col-sm-9
+											div.content_left
+												div(ng-if="en()")
+													h4 Nikita Bulatov
+													p Founder, CEO and lead architect of projects at GOARCHITECTS bureau.
+												div(ng-if="ua()")
+													h4 Nikita Bulatov
+													p Засновник та керівник проектів у бюро GOARCHITECTS.
+												div.right_side
+													div(ng-if="en()")
+														p “The GOARCHITECTS is a group of architects and thinkers operating within the fields of architecture and interior design”
+													div(ng-if="ua()")
+														p “GOARCHITECTS це група архітекторів та однодумців, які працюють в галузі архітектури та дизайну інтер'єру”
+										div.col-sm-3
+											div.img
+												img(src="./css/img/photo.png")
+			
+			footer
+				div.container
+					div.contact_section
+						div(ng-if="en()")
+							h3 Contact us
+						div(ng-if="ua()")
+							h3 Контакти
+						p +38 (097) 427 74 35
+						p na.bulatov@gmail.com
+					div.social_icon
+						a(href="https://www.facebook.com/thegoarchitects" target="black")
+							div.button
+								img(src="./css/img/facebook-logo-b.svg" alt="")
+						a(href="https://www.behance.net/thegoarchitects" target="black")
+							div.button
+								img(src="./css/img/behance-logo-b.svg" alt="")
+						a(href="https://www.instagram.com/thegoarchitects/" target="black")
+							div.button
+								img(src="./css/img/instagram-logo-b.svg" alt="")
+						a(href="mailto:na.bulatov@gmail.com&Body=%0D%0A%0D%0AHello%20Nikita" target="black")
+							div.button
+								img(src="./css/img/envelope-b.svg" alt="")
+					div.col-md-12
+						p.footer @ 2016 Created by Web-developer 
+							a(href="https://www.facebook.com/artem.borovensky" target="black") Artem Borovenskiy
+							|  and UX Designer 
+							a(href="https://www.facebook.com/bulatova.kate" target="black") Kate Bulatova
+
+
+
+
+		script(type="text/javascript" src="./js/common.js")
+
+
